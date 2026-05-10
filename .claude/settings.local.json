@@ -4,7 +4,35 @@
       "Bash(Get-ChildItem -Path \"d:\\\\VS_CODE_code_claude\\\\DTCore\" -Force)",
       "PowerShell(Get-ChildItem -Path \"d:\\\\VS_CODE_code_claude\\\\DTCore\\\\src\" -Recurse -Directory | ForEach-Object { $_.FullName })",
       "Bash(xargs grep -l \"@RestController\\\\|@Controller\")",
-      "Bash(mvn --version)"
+      "Bash(mvn --version)",
+      "WebSearch",
+      "Bash(mkdir -p \"d:\\\\VS_CODE_code_claude\\\\DTCore\\\\.claude\\\\skills\\\\install-libs\")",
+      "Edit(/.claude/skills/install-libs/**)",
+      "Bash(./mvnw clean *)",
+      "PowerShell($env:JAVA_HOME = \\(Get-Command java -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source | Split-Path -Parent | Split-Path -Parent\\); if \\(-not $env:JAVA_HOME\\) { $env:JAVA_HOME = \"C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-21.0.7.6-hotspot\" }; Write-Host \"JAVA_HOME: $env:JAVA_HOME\"; java -version 2>&1)",
+      "PowerShell(Get-ChildItem \"C:\\\\Program Files\\\\Eclipse Adoptium\", \"C:\\\\Program Files\\\\Java\", \"C:\\\\Program Files\\\\Microsoft\", \"C:\\\\Program Files\\\\BellSoft\", \"C:\\\\Program Files\\\\Amazon Corretto\" -ErrorAction SilentlyContinue | Where-Object { $_.Name -match \"21\" } | Select-Object FullName)",
+      "PowerShell(Get-ChildItem \"C:\\\\Program Files\" -Directory | Where-Object { $_.Name -match \"\\(java|jdk|jre|adoptium|corretto|temurin|graal|zulu|bellsoft\\)\" -and $_.Name -match \"21\" } -ErrorAction SilentlyContinue | Select-Object FullName; Get-ChildItem \"C:\\\\Program Files\" -Directory -ErrorAction SilentlyContinue | Where-Object { $_.Name -match \"\\(java|jdk|adoptium|corretto|temurin|graal|zulu\\)\" } | Select-Object Name)",
+      "PowerShell(Get-ChildItem \"C:\\\\Program Files\\\\Eclipse Adoptium\" -ErrorAction SilentlyContinue; Get-ChildItem \"C:\\\\\" -Directory -ErrorAction SilentlyContinue | Where-Object { $_.Name -match \"jdk|java\" })",
+      "PowerShell(Get-ChildItem \"D:\\\\\" -Directory | Where-Object { $_.Name -match \"jdk|java|eclipse|adoptium|zulu|corretto\" } -ErrorAction SilentlyContinue; Get-ChildItem \"C:\\\\Users\\\\soontarr\" -Directory -ErrorAction SilentlyContinue | Where-Object { $_.Name -match \"jdk|java|sdkman|jabba\" })",
+      "PowerShell(cat \"D:\\\\VS_CODE_code_claude\\\\DTCore\\\\.mvn\\\\jvm.config\" -ErrorAction SilentlyContinue; cat \"D:\\\\VS_CODE_code_claude\\\\DTCore\\\\.mvn\\\\wrapper\\\\maven-wrapper.properties\" -ErrorAction SilentlyContinue; $env:PATH -split \";\" | Where-Object { $_ -match \"java|jdk\" })",
+      "PowerShell([System.Environment]::GetEnvironmentVariable\\(\"JAVA_HOME\", \"User\"\\); [System.Environment]::GetEnvironmentVariable\\(\"JAVA_HOME\", \"Machine\"\\))",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Program Files \\(x86\\)/**)",
+      "Read(//d/VS_CODE_code_claude/DTCore-Lib/.mvn/wrapper/**)",
+      "PowerShell(Get-ChildItem \"$env:APPDATA\\\\Local\\\\Programs\" -ErrorAction SilentlyContinue | Where-Object { $_.Name -match \"java|jdk|eclipse|adoptium\" }; Get-ChildItem \"$env:LOCALAPPDATA\\\\Programs\" -ErrorAction SilentlyContinue | Where-Object { $_.Name -match \"java|jdk|eclipse|adoptium\" })",
+      "Read(//d//**)",
+      "Read(//d/VS_CODE_code_claude/**)",
+      "PowerShell(Get-ChildItem \"C:\\\\\" -Directory | Where-Object { $_.Name -match \"java|jdk|sdk\" } -ErrorAction SilentlyContinue; Get-ChildItem \"C:\\\\ProgramData\\\\Oracle\" -ErrorAction SilentlyContinue | Select-Object Name)",
+      "Read(//c/ProgramData/Oracle/Java/**)",
+      "PowerShell(Get-Item \"C:\\\\ProgramData\\\\Oracle\\\\Java\\\\javapath\\\\java.exe\" | Select-Object -ExpandProperty Target -ErrorAction SilentlyContinue; \\(Get-Item \"C:\\\\ProgramData\\\\Oracle\\\\Java\\\\javapath\\\\java.exe\"\\).LinkTarget)",
+      "PowerShell(Get-ChildItem \"$env:USERPROFILE\\\\.vscode\\\\extensions\" -Directory | Where-Object { $_.Name -match \"java\" } | Select-Object Name | Sort-Object Name)",
+      "PowerShell(dir \"$env:USERPROFILE\\\\.vscode\\\\extensions\" | Where-Object { $_.Name -match \"java\" } | Select-Object Name)",
+      "PowerShell(dir \"$env:USERPROFILE\\\\.vscode\\\\extensions\" | Select-Object Name | head -30; dir \"$env:USERPROFILE\\\\.vscode\" | Select-Object Name)",
+      "PowerShell(cd \"D:\\\\VS_CODE_code_claude\\\\DTCore-Lib\"; $env:JAVA_HOME = \"C:\\\\NOOM_PRO\\\\program_noom2\\\\program_noom2\\\\microsoft-jdk-21.0.10-windows-x64\\\\jdk-21.0.10+7\"; .\\\\mvnw clean install -DskipTests)",
+      "PowerShell(cd \"D:\\\\VS_CODE_code_claude\\\\DTCore-Queue-Lib\"; $env:JAVA_HOME = \"C:\\\\NOOM_PRO\\\\program_noom2\\\\program_noom2\\\\microsoft-jdk-21.0.10-windows-x64\\\\jdk-21.0.10+7\"; .\\\\mvnw clean install -DskipTests)"
+    ],
+    "additionalDirectories": [
+      "d:\\VS_CODE_code_claude\\DTCore\\.claude\\skills"
     ]
   }
 }
