@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"d:\\\\VS_CODE_code_claude\\\\DTCore\" -Force)",
+      "PowerShell(Get-ChildItem -Path \"d:\\\\VS_CODE_code_claude\\\\DTCore\\\\src\" -Recurse -Directory | ForEach-Object { $_.FullName })",
+      "Bash(xargs grep -l \"@RestController\\\\|@Controller\")",
+      "Bash(mvn --version)"
+    ]
+  }
+}
