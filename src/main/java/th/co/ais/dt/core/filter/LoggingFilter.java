@@ -86,6 +86,7 @@ public class LoggingFilter extends OncePerRequestFilter {
 
     private String truncateRes(String body) {
         if (body == null || body.isEmpty()) return "-";
+        if (!(body.startsWith("[") || body.startsWith("{"))) return "-";
         return body.length() <= MAX_BODY_RES_LENGTH ? body : body.substring(0, MAX_BODY_RES_LENGTH) + "...[truncated]";
     }
 }
