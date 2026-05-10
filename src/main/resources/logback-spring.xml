@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+	<include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+	<appender name="CONSOLE_JSON" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+			<layout class="ch.qos.logback.contrib.json.classic.JsonLayout">
+				<timestampFormat>yyyy-MM-dd HH:mm:ss.SSS</timestampFormat>
+				<jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+					<!--					<prettyPrint>true</prettyPrint>-->
+				</jsonFormatter>
+				<appendLineSeparator>true</appendLineSeparator>
+			</layout>
+		</encoder>
+	</appender>
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>
+				${HOSTNAME} %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread]  %logger{36}.%M - %msg%n
+			</Pattern>
+		</layout>
+	</appender>
+
+	<springProfile name="local">
+		<root level="INFO">
+			<appender-ref ref="CONSOLE" />
+		</root>
+	</springProfile>
+
+	<springProfile name="!local">
+		<root level="INFO">
+			<appender-ref ref="CONSOLE_JSON" />
+		</root>
+	</springProfile>
+
+</configuration>

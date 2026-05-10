@@ -1,0 +1,9 @@
+FROM ghcr.io/corp-ais/debian:12.2-slim
+
+WORKDIR /src
+
+# Copy the native binary from the build stage
+COPY app /src/app
+
+# Run the application
+CMD ["/src/app"]

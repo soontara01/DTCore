@@ -1,0 +1,77 @@
+package th.co.ais.dt.core.service.core.impl.sap.dto;
+
+import lombok.Data;
+
+@Data
+public class SerialnumberValidationCmValue {
+	private String BP_CODE;
+	private String SERIAL_NO;
+	private String BILLING_TYPE;
+	private String INVOICE_NO;
+	private String INVOICE_DATE;
+	private String BRAND;
+	private String MODEL;
+	private String TYPE;
+	private String GOOD_RETURN_NO;
+	private String GOOD_RETURN_DATE;
+	private String TRAN_TYPE;
+	private String DELIVERY_NO;
+	private String DELIVERY_DATE;
+	private String REF_SERIAL_NO;
+	private String PRICE;
+	private String DISTRIBUTE_CHANNEL;
+	private String PRICE_LIST_TYPE;
+	private String MATERIAL_CODE;
+	private String REGISTER_DATE;
+	private String REGIS_DEALER_CODE;
+	private String ORDER_TYPE;
+	private String OLD_ORDER_TYPE;
+	private String OLD_REGISTER_DATE;
+	private String REPLACED_SERIAL_NO;
+	private String RECORD_STATUS;
+	private String SAP_USER;
+	private String SAP_DATE;
+	private String CUB_USER;
+	private String CUB_DATE;
+	private String SAP_PACK_TYPE;
+	private String SAP_ITEM_FLAG;
+	private String SAP_PAYER_TO;
+	private String SALE_ORG;
+	private String INTERFACE_DATE;
+	private String ITEM_CAT;
+	private String CDR_USED_FLAG;
+	private String CDR_DATE;
+	private String NO_CDR_USED;
+	private String ORDER_DATE;
+	private String ASC_USED_FLAG;
+	private String ASC_DATE;
+	private String MN_REGION;
+	private String SUB_REGION;
+	private String LAST_UPDATE_BY;
+	private String LAST_UPDATE_DTM;
+	private String NEW_ASC_DATE;
+	private String UPDATE_ASC_DATE;
+	private String PROJECT_CODE;
+	private String PAYMENT_TERM;
+	private String NET_DUE_DATE;
+	private String PO_NO;
+	private String SHIPTO_CODE;
+	private String DEALER_SHIPTO;
+	private String SALE_USED_FLAG;
+	private String SALE_DATE;
+	private String DIVISION;
+	private String CUSTOMER_GROUP;
+	private String NEW_BRAND;
+	private String NEW_MODEL;
+	private String ROUND_ID;
+	private String USED_FLAG;
+	private String RETURN_PRICE;
+	private String ADJUST_PRICE;
+	private String ORG_SERIAL_NO;
+	private String ORG_IUID;
+	private String MAT_ITEM_QTY;
+	private String MAT_ITEM_AMT;
+	private String MAT_DESC;
+	private String PLANT_HQ;
+
+}

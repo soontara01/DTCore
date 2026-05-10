@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.3.4</version>
+		<relativePath/> 
+	</parent>
+	<groupId>th.co.ais.dt</groupId>
+	<artifactId>dt-core</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>dt-core</name>
+	<description>DTCore api</description>
+	
+	
+	<properties>
+		<java.version>21</java.version>
+	</properties>
+	
+	<!-- Azure Storage Queue 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.azure.spring</groupId>
+				<artifactId>spring-cloud-azure-dependencies</artifactId>
+				<version>4.11.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>-->
+	
+	<dependencies>
+		<!-- Azure Storage Queue 
+		<dependency>
+			<groupId>com.azure.spring</groupId>
+			<artifactId>spring-cloud-azure-starter-integration-storage-queue</artifactId>
+		</dependency>-->
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>5.3.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+		</dependency>
+
+		<!-- https://docs.jboss.org/hibernate/orm/6.1/userguide/html_single/Hibernate_User_Guide.html#sql -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+		    <groupId>org.postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jersey</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.11.0</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>net.sf.barcode4j</groupId>
+		    <artifactId>barcode4j</artifactId>
+		    <version>2.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>net.sourceforge.barbecue</groupId>
+		    <artifactId>barbecue</artifactId>
+		    <version>1.5-beta1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>5.2.3</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+		
+		<dependency>
+		   <groupId>org.springframework.boot</groupId>
+		   <artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>2.0</version>
+		</dependency>
+
+		<!--  install local lib  --> 
+		<!-- goals =   clean install -Dmaven.test.skip=true -->
+		<!-- java -jar rest-service-initial-0.0.1-SNAPSHOT.jar th.co.ais.dt.RestServiceApplication -->
+
+
+		<dependency>
+			<groupId>ch.qos.logback.contrib</groupId>
+			<artifactId>logback-json-classic</artifactId>
+			<version>0.1.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback.contrib</groupId>
+			<artifactId>logback-jackson</artifactId>
+			<version>0.1.5</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>th.co.ais.dt</groupId>
+	        <artifactId>dt-queue-lib</artifactId>
+	        <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>th.co.ais.dt</groupId>
+	        <artifactId>dt-core-lib</artifactId>
+	        <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-csv</artifactId>
+		    <version>1.10.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.11</version>
+				<configuration>
+					<excludes>
+						<exclude>*MethodAccess</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>jacoco-initialize</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<!--
+                        - Do aot process
+                        - Compile native using docker GraalVM (Buildpack)
+                        - Build Docker image (Buildpack)
+            	-->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+<!--				<configuration>-->
+<!--					<image>-->
+<!--						<builder>paketobuildpacks/builder:tiny</builder>-->
+<!--						<buildpacks>-->
+<!--							<buildpack>gcr.io/paketo-buildpacks/graalvm:8.2.0</buildpack>-->
+<!--							<buildpack>gcr.io/paketo-buildpacks/java-native-image:8.13.1</buildpack>-->
+<!--						</buildpacks>-->
+<!--						<env>-->
+<!--							<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>-->
+<!--							<BP_JVM_VERSION>17.0.8</BP_JVM_VERSION>-->
+<!--							<JAVA_TOOL_OPTIONS>-Xmx6g -Xms6g</JAVA_TOOL_OPTIONS>-->
+<!--							<BP_NATIVE_IMAGE_BUILD_ARGUMENTS>-H:+ReportExceptionStackTraces &#45;&#45;initialize-at-build-time=org.apache.commons.logging.LogFactory,org.apache.commons.logging.LogFactoryService,org.slf4j.MDC,ch.qos.logback.core.pattern.parser.Parser,ch.qos.logback.core.util.Loader,ch.qos.logback.core.util.StatusPrinter,org.slf4j.impl.StaticLoggerBinder,org.slf4j.LoggerFactory,ch.qos.logback.classic.Logger,ch.qos.logback.core.spi.AppenderAttachableImpl,ch.qos.logback.core.status.StatusBase,ch.qos.logback.classic.Level,ch.qos.logback.core.status.InfoStatus,ch.qos.logback.classic.PatternLayout,ch.qos.logback.core.CoreConstants</BP_NATIVE_IMAGE_BUILD_ARGUMENTS>-->
+<!--							&lt;!&ndash;							<BP_NATIVE_IMAGE_BUILT_ARTIFACT>${project.basedir}/target/rest-service-initial-0.0.1-SNAPSHOT.jar</BP_NATIVE_IMAGE_BUILT_ARTIFACT>&ndash;&gt;-->
+<!--						</env>-->
+<!--					</image>-->
+<!--				</configuration>-->
+			</plugin>
+			<plugin>
+				<!--
+					- Do add reachability metadata
+					- Compile native using local GraalVM
+				-->
+				<groupId>org.graalvm.buildtools</groupId>
+				<artifactId>native-maven-plugin</artifactId>
+				<configuration>
+					<buildArgs>
+<!--						<buildArg>-Ob</buildArg>-->
+						<buildArg>-march=x86-64-v3</buildArg>
+						<buildArg>-J-XX:MaxRAMPercentage=85</buildArg>
+						<buildArg>-J-XshowSettings:vm</buildArg>
+						<buildArg>-H:+ReportExceptionStackTraces</buildArg>
+						<buildArg>--initialize-at-build-time=org.apache.commons.logging.LogFactory,org.apache.commons.logging.LogFactoryService,org.slf4j.MDC,ch.qos.logback.core.pattern.parser.Parser,ch.qos.logback.core.util.Loader,ch.qos.logback.core.util.StatusPrinter,org.slf4j.impl.StaticLoggerBinder,org.slf4j.LoggerFactory,ch.qos.logback.classic.Logger,ch.qos.logback.core.spi.AppenderAttachableImpl,ch.qos.logback.core.status.StatusBase,ch.qos.logback.classic.Level,ch.qos.logback.core.status.InfoStatus,ch.qos.logback.classic.PatternLayout,ch.qos.logback.core.CoreConstants</buildArg>
+					</buildArgs>
+<!--										<jvmArgs>-->
+<!--											<arg>-Xmx6g</arg>-->
+<!--											<arg>-Xms6g</arg>-->
+<!--										</jvmArgs>-->
+				</configuration>
+			</plugin>
+		</plugins>
+		<testSourceDirectory>./src/test/java</testSourceDirectory>
+	</build>
+
+
+</project>

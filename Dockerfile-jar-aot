@@ -1,0 +1,15 @@
+FROM ghcr.io/corp-ais/eclipse-temurin:21-jdk-alpine-sky
+WORKDIR /opt/app
+
+RUN addgroup --system javauser && adduser -S -s /usr/sbin/nologin -G javauser javauser
+
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+#COPY src/main/resources/reports src/main/resources/reports
+
+RUN chown -R javauser:javauser .
+USER javauser
+EXPOSE 8080
+
+#ENTRYPOINT ["java","-Dspring.aot.enabled=true" ,"-jar","app.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]

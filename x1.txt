@@ -1,0 +1,10 @@
+t11
+
+set SPRING_PROFILES_ACTIVE=local
+
+D:\program_noom\dataFile\data\graalvm-jdk-17_windows-x64_bin\graalvm-jdk-17.0.8+9.1\bin\java -jar -agentlib:native-image-agent=config-output-dir=META-INF/native-image dt-core-0.0.1-SNAPSHOT.jar th.co.ais.dt.RestServiceApplication
+https://www.graalvm.org/latest/reference-manual/native-image/metadata/AutomaticMetadataCollection/
+
+## command to run agent to get reflection hints
+mvn clean -Pnative  -DskipTests package
+java -Dspring.aot.enabled=true -agentlib:native-image-agent=config-output-dir=tempresource/ -jar target/dt-core-0.0.1-SNAPSHOT.jar

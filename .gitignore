@@ -1,0 +1,5 @@
+/target/
+.classpath
+.idea/
+rest-service-initial.iml
+src/main/resources/application-local.yaml

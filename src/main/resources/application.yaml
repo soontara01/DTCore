@@ -1,0 +1,72 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.75.132:5432/DT-DEV
+    username: soontara
+    password: soontara01
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  kafka:
+      bootstrap-servers: 
+      properties:
+         security:
+            protocol: SASL_SSL
+         sasl:
+            jaas:
+               config: 
+            mechanism: PLAIN
+      producer:
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.apache.kafka.common.serialization.StringSerializer          
+           
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
+    #org.hibernate.type: TRACE
+  
+server:
+  port: 8080
+  servlet:
+    context-path: /DTWS
+
+
+dt:
+  config:
+    url:
+      privilege: http://privilege.co.th
+      sff: http://sff.co.th
+
+    secret:
+      sffpass: 1
+      sffuser: 2
+      privilegepass: 3
+      privilegeuser: 4
+
+mail:
+  host: smtp.office365.com
+  port: 587
+  username: testuser
+  password: testpassword
+  auth-enabled: true
+  tls-enabled: true
+
+encryption:
+  master-key: 
+  master-key-version: 
+
+queue-service:
+  endpoint: "https://stdtazassedev001.queue.core.windows.net"
+  sasToken: ""
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health  
+  health:
+    probes:
+      enabled: true    
