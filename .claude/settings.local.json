@@ -29,7 +29,12 @@
       "PowerShell(dir \"$env:USERPROFILE\\\\.vscode\\\\extensions\" | Where-Object { $_.Name -match \"java\" } | Select-Object Name)",
       "PowerShell(dir \"$env:USERPROFILE\\\\.vscode\\\\extensions\" | Select-Object Name | head -30; dir \"$env:USERPROFILE\\\\.vscode\" | Select-Object Name)",
       "PowerShell(cd \"D:\\\\VS_CODE_code_claude\\\\DTCore-Lib\"; $env:JAVA_HOME = \"C:\\\\NOOM_PRO\\\\program_noom2\\\\program_noom2\\\\microsoft-jdk-21.0.10-windows-x64\\\\jdk-21.0.10+7\"; .\\\\mvnw clean install -DskipTests)",
-      "PowerShell(cd \"D:\\\\VS_CODE_code_claude\\\\DTCore-Queue-Lib\"; $env:JAVA_HOME = \"C:\\\\NOOM_PRO\\\\program_noom2\\\\program_noom2\\\\microsoft-jdk-21.0.10-windows-x64\\\\jdk-21.0.10+7\"; .\\\\mvnw clean install -DskipTests)"
+      "PowerShell(cd \"D:\\\\VS_CODE_code_claude\\\\DTCore-Queue-Lib\"; $env:JAVA_HOME = \"C:\\\\NOOM_PRO\\\\program_noom2\\\\program_noom2\\\\microsoft-jdk-21.0.10-windows-x64\\\\jdk-21.0.10+7\"; .\\\\mvnw clean install -DskipTests)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(gh pr create --title 'feat: enhance LoggingFilter with header logging and masked sensitive values' --body ' *)",
+      "Bash(git cherry-pick *)"
     ],
     "additionalDirectories": [
       "d:\\VS_CODE_code_claude\\DTCore\\.claude\\skills"
